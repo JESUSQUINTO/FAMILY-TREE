@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Family Tree</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<section id="login">
+  <div class="box">
+    <div id="vSign">
+      <h1>🌳 Create your account</h1>
+      <p>Sign up to start building your own family tree.</p>
+      <label for="sName">Your full name</label><input id="sName" placeholder="e.g. Maria Santos" autocomplete="name">
+      <label for="sYr">Year born</label><input id="sYr" type="number" placeholder="e.g. 1995">
+      <label for="sUser">Username</label><input id="sUser" autocomplete="username" autocapitalize="none">
+      <label for="sPw">Password (6+ characters)</label><input id="sPw" type="password" autocomplete="new-password">
+      <label for="sPw2">Confirm password</label><input id="sPw2" type="password" autocomplete="new-password">
+      <div class="err" id="sErr"></div>
+      <button id="sGo">Sign up</button>
+      <p style="margin:16px 0 0;text-align:center">Already have an account? <a href="#" id="toLog">Log in</a></p>
+    </div>
+    <div id="vLog" class="hidden">
+      <h1>🌳 Welcome back</h1>
+      <p>Log in to see your family tree.</p>
+      <label for="lUser">Username</label><input id="lUser" autocomplete="username" autocapitalize="none">
+      <label for="lPw">Password</label><input id="lPw" type="password" autocomplete="current-password">
+      <div class="err" id="lErr"></div>
+      <button id="lGo">Log in</button>
+      <p style="margin:16px 0 0;text-align:center">New here? <a href="#" id="toSign">Sign up</a></p>
+    </div>
+  </div>
+</section>
+ 
+<section id="app" class="hidden">
+  <header>
+    <div><h2 id="ttl">Family Tree</h2><span id="hello"></span></div>
+    <button class="ghost" id="out">Log out</button>
+  </header>
+  <div class="scroll"><ul class="tree" id="tree"></ul></div>
+  <div id="add" class="box">
+    <h2 style="font-size:20px">Add a family member</h2>
+    <label for="rel">Relation</label>
+    <select id="rel"><option value="child">Child of…</option><option value="spouse">Spouse of…</option><option value="parent">Parent of…</option><option value="sibling">Sibling of…</option></select>
+    <label for="of">Person</label><select id="of"></select>
+    <label for="nm">Full name</label><input id="nm" placeholder="e.g. Pedro Santos">
+    <label for="yr">Year born</label><input id="yr" type="number" placeholder="e.g. 1970">
+    <div class="err" id="err2"></div>
+    <button id="save">Add to my tree</button>
+  </div>
+</section>
+ 
+<script src="script.js"></script>
+</body>
+</html>
